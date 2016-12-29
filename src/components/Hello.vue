@@ -1,11 +1,23 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <el-button @click="visible = true">按钮</el-button>
+    <p>
+      <el-button @click="visible = true" type="primary">按钮</el-button>
+    </p>
     <el-dialog v-model="visible" title="Hello world">
       <p>欢迎使用 Element</p>
     </el-dialog>
+
+    <el-switch
+      v-model="value1"
+      on-text=""
+      off-text="">
+    </el-switch>
+    <el-switch
+      v-model="value2"
+      on-color="#13ce66"
+      off-color="#ff4949">
+    </el-switch>
+
   </div>
 </template>
 
@@ -14,8 +26,10 @@ export default {
   name: 'hello',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App',
-      visible: false
+      msg: 'Tanmer.com',
+      visible: false,
+      value1: true,
+      value2: true
     }
   }
 }
