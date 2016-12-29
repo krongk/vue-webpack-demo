@@ -5,9 +5,14 @@ import App from './App' // 程序入口
 import routes from './routes'
 
 // Element UI
-import Element from 'element-ui'
-import 'element-ui/lib/theme-default/index.css'
-Vue.use(Element)
+// import Element from 'element-ui'
+// import 'element-ui/lib/theme-default/index.css'
+// Vue.use(Element)
+
+// Mint UI
+import Mint from 'mint-ui'
+import 'mint-ui/lib/style.css'
+Vue.use(Mint)
 
 // vueRouter
 import VueRouter from 'vue-router'

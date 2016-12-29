@@ -1,23 +1,6 @@
 <template>
   <div class="hello">
-    <p>
-      <el-button @click="visible = true" type="primary">按钮</el-button>
-    </p>
-    <el-dialog v-model="visible" title="Hello world">
-      <p>欢迎使用 Element</p>
-    </el-dialog>
-
-    <el-switch
-      v-model="value1"
-      on-text=""
-      off-text="">
-    </el-switch>
-    <el-switch
-      v-model="value2"
-      on-color="#13ce66"
-      off-color="#ff4949">
-    </el-switch>
-
+    Hello
   </div>
 </template>
 

@@ -2,6 +2,7 @@
 import index from './components/Index.vue'
 import hello from './components/Hello.vue'
 import grid from './components/grid.vue'
+import tab from './components/tab.vue'
 
 module.exports = [  // 定义路由映射
   {  // 访问地址
@@ -16,5 +17,9 @@ module.exports = [  // 定义路由映射
   {
     path: '/grid',
     component: grid
+  },
+  {
+    path: '/tab',
+    component: tab
   }
 ]
