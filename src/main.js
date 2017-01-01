@@ -9,10 +9,27 @@ import routes from './routes'
 // import 'element-ui/lib/theme-default/index.css'
 // Vue.use(Element)
 
+// https://github.com/surmon-china/vue-awesome-swiper
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+Vue.use(VueAwesomeSwiper)
+
 // Mint UI
 import Mint from 'mint-ui'
 import 'mint-ui/lib/style.css'
 Vue.use(Mint)
+
+// F7 css
+// import 'framework7/dist/css/framework7.ios.min.css'
+// import 'framework7/dist/css/framework7.ios.colors.css'
+
+// register components
+Vue.component('grid', require('components/_grid'))
+
+Vue.component('card', require('components/card'))
+Vue.component('card-product', require('components/card-product')) // 产品
+Vue.component('card-shop', require('components/card-shop')) // 商家
+Vue.component('card-favorite', require('components/card-favorite')) // 分享文章
+Vue.component('list', require('components/_list'))
 
 // vueRouter
 import VueRouter from 'vue-router'

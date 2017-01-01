@@ -1,18 +1,11 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <h2>{{msg}}</h2>
-    <!-- <hello></hello> -->
-    <p>
-      <!-- 使用 router-link 组件来导航. -->
-      <!-- 通过传入 `to` 属性指定链接. -->
-      <!-- <router-link> 默认会被渲染成一个 `<a>` 标签 -->
-      <router-link to="/index">Index</router-link>
-      <router-link to="/hello">Hello</router-link>
-      <router-link to="/grid">Grid</router-link>
-      <router-link to="/tab">Tab</router-link>
-    </p>
-    <hr/>
+    <mt-header :title="title" :fixed=true>
+      <router-link to="/" slot="left">
+        <mt-button icon="back">返回</mt-button>
+      </router-link>
+      <mt-button icon="more" slot="right"></mt-button>
+    </mt-header>
 
     <!-- 路由出口 -->
     <!-- 路由匹配到的组件将渲染在这里 -->
@@ -27,7 +20,7 @@ export default {
   name: 'app',
   data () {
     return {
-      msg: '探码科技'
+      title: '探码科技'
     }
   },
   components: {

@@ -15,6 +15,7 @@
   "dependencies": {
     "mint-ui": "^2.0.6",
     "vue": "^2.1.0",
+    "vue-awesome-swiper": "^2.2.9",
     "vue-router": "^2.1.1"
   },
   "devDependencies": {

@@ -1,8 +1,8 @@
 // 引入组件！直接使用es6的语法
-import index from './components/Index.vue'
-import hello from './components/Hello.vue'
-import grid from './components/grid.vue'
-import tab from './components/tab.vue'
+import index from './views/Index.vue'
+import tab from './views/tab.vue'
+import Product from './views/product.vue'
+import welcomeScreen from './views/welcome-screen.vue'
 
 module.exports = [  // 定义路由映射
   {  // 访问地址
@@ -11,15 +11,16 @@ module.exports = [  // 定义路由映射
     // component:require("components/app.vue")//还可以直接使用这样的方式也是没问题的。不过会没有import集中引入那么直观
   },
   {
-    path: '/hello',
-    component: hello
-  },
-  {
-    path: '/grid',
-    component: grid
-  },
-  {
     path: '/tab',
     component: tab
+  },
+  {
+    path: '/welcome-screen',
+    component: welcomeScreen
+  },
+  {
+    path: '/product/:productId',
+    name: 'product',
+    component: Product
   }
 ]

@@ -1,6 +1,6 @@
-# sxhapp
+# web app
 
-> A Vue.js project, build with Vue.js, Webpack, Element UI.
+> A Vue.js project, build with Vue.js, Webpack, Mint UI.
 
 ## Build Setup
 

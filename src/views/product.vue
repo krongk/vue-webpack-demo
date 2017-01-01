@@ -1,12 +1,12 @@
 <template>
-  <div class="hello">
-    Hello word!
+  <div class="product">
+    Product
   </div>
 </template>
 
 <script>
 export default {
-  name: 'hello',
+  name: 'product',
   data () {
     return {
       msg: 'Tanmer.com',
