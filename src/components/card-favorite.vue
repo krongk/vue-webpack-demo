@@ -11,15 +11,18 @@
             </div>
             <div class="item-inner">
               <div class="item-title-row">
-                <h3 style="text-align: left; margin: 0px;">来自南美的咖啡豆，真心美味！</h3>
+                <router-link to="/post/23" style="font-size: 18px; text-align: left; margin: 0px;">来自南美的咖啡豆，真心美味！</router-link>
               </div>
-              <div class="item-subtitle">这是描述，这是描述部分，这是描述部分，这是描述部分</div>
+              <br/>
               <div style="float: left;">
                 <img src="/static/images/user.png" width="34" height="34">
                 小可
               </div>
-              <div style="float: right;"><mt-button size="small">+ 查看</mt-button>
-</div>
+              <div style="float: right;">
+                <router-link to="/post/23">
+                 <mt-button size="small">+ 查看</mt-button>
+                </router-link>
+              </div>
             </div>
           </li>
         </ul>

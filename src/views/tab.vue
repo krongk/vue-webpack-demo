@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <mt-tab-container v-model="selected" :swipeable=false>
       <mt-tab-container-item id="tab-home">
         <tab-home></tab-home>
@@ -18,6 +17,7 @@
         <tab-me></tab-me>
       </mt-tab-container-item>
     </mt-tab-container>
+
     <mt-tabbar v-model="selected" :fixed=true>
       <mt-tab-item id="tab-home">
         <i class="fa fa-home fa-2x"></i>
@@ -28,7 +28,9 @@
         发现
       </mt-tab-item>
       <mt-tab-item id="tab-share" class="share-plus">
-        <i class="fa fa-plus-circle fa-3x"></i>
+        <router-link to="/">
+          <i class="fa fa-plus-circle fa-3x"></i>
+        </router-link>
       </mt-tab-item>
       <mt-tab-item id="tab-favorite">
         <i class="fa fa-star-half-o fa-2x"></i>
@@ -69,7 +71,11 @@
   }
 </script>
 
-<style>
+<style scoped>
+  .mint-tabbar.is-fixed{
+    z-index: 1000;
+  }
+
   .mint-tab-item{
     font-size: 16px;
     text-align: center;
@@ -82,4 +88,15 @@
     font-size: 6em;
     top: -10px;
   }
+  /*白色背景，透明度0.6*/
+  .mint-tabbar > .mint-tab-item.is-selected{
+    color: red;
+    background: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.6);
+    background: transparent\9;
+    zoom: 1;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99ffffff, endColorstr=#99ffffff);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99ffffff, endColorstr=#99ffffff)";
+  }
+
 </style>

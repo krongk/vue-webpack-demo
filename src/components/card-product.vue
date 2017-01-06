@@ -1,16 +1,21 @@
 <template>
   <div class="card facebook-card">
     <div class="card-content">
-      <div class="card-content-inner3">
+      <router-link to="/product/23" class="card-content-inner2">
         <img src="/static/images/banner-product.jpg" width="100%">
-        <p style="text-align: left">这是新爆款产品茉莉花小</p>
-      </div>
+        <p style="text-align: left; padding-left: 10px; font-size: 18px;"> 这是新爆款产品茉莉花小</p>
+      </router-link>
     </div>
     <div class="card-footer">
-      <a href="#" class="link">
-        <div v-for="i in 6" class="facebook-avatar"><img src="/static/images/user.png" width="34" height="34"></div>
-      </a>
-      <a href="#" class="link">查看</a>
+      <div class="row">
+        <div class="col-80">
+          <router-link to="/user/23" v-for="i in 5" class="facebook-avatar"><img src="/static/images/user.png" width="30" height="30"></router-link>
+          <router-link to="/users" class="facebook-avatar"><img src="/static/images/icon-more.png" width="30" height="30"></router-link>
+        </div>
+        <div class="col-20">
+          <router-link to="/product/2"><span style="font-size:24px; color: red; padding-right: 10px;">￥32.5</span></router-link>
+        </div>
+      </div>
     </div>
   </div>
 </template>

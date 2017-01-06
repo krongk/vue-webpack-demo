@@ -24,7 +24,7 @@
           direction: 'vertical',
           slidesPerView: 1,
           paginationClickable: true,
-          spaceBetween: 30,
+          spaceBetween: 0,
           mousewheelControl: true
         }
       }
@@ -32,7 +32,7 @@
   }
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
   html,body {
     position: relative;
     height: 100%;

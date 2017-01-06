@@ -43,34 +43,9 @@
       <img src="/static/images/me-share.png" class="img-responsive">
     </div>
 
-    <div class="list-block">
-      <ul>
-        <li>
-          <a href="#" class="item-link item-content">
-            <div class="item-media"><i class="icon icon-f7"></i></div>
-            <div class="item-inner">
-              <div class="item-title">推荐返现</div>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="item-link item-content">
-            <div class="item-media"><i class="icon icon-f7"></i></div>
-            <div class="item-inner">
-              <div class="item-title">使用帮助</div>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="item-link item-content">
-            <div class="item-media"><i class="icon icon-f7"></i></div>
-            <div class="item-inner">
-              <div class="item-title">联系客户</div>
-            </div>
-          </a>
-        </li>
-      </ul>
-    </div>
+    <mt-cell title="标题文字" to="/tab" is-link  value=""></mt-cell>
+    <mt-cell title="标题文字" to="/tab" is-link  value=""></mt-cell>
+    <mt-cell title="标题文字" to="/tab" is-link  value=""></mt-cell>
 
   </div>
 </template>

@@ -1,12 +1,11 @@
 <template>
   <div id="app">
-    <mt-header :title="title" :fixed=true>
-      <router-link to="/" slot="left">
-        <mt-button icon="back">返回</mt-button>
+    <mt-header v-if="visiable" :title="title" :fixed=false style="background: #4e4a97;">
+      <router-link slot="left" class="page-back" :to="'/tab'">
+        <mt-button icon="fa fa-back">返回</mt-button>
       </router-link>
-      <mt-button icon="more" slot="right"></mt-button>
+      <mt-button icon="search" slot="right" v-on:click="showSearch"></mt-button>
     </mt-header>
-
     <!-- 路由出口 -->
     <!-- 路由匹配到的组件将渲染在这里 -->
     <router-view></router-view>
@@ -14,8 +13,6 @@
 </template>
 
 <script>
-import Hello from './components/Hello'
-
 export default {
   name: 'app',
   data () {
@@ -23,31 +20,36 @@ export default {
       title: '探码科技'
     }
   },
-  components: {
-    Hello
+  methods: {
+    showSearch () {
+      this.$router.push('/search')
+    }
+  },
+  computed: {
+    visiable () {
+      return ['/', '/tab', '/search', '/welcome-screen'].indexOf(this.$route.path) < 0
+    }
   }
 }
 </script>
 
 <style>
-@import './assets/css/style.css';
+  @import './assets/css/style.css';
 
-[v-cloak] {
-  display: none;
-}
-.fade-transition {
-  transition: opacity .3s ease;
-}
-.fade-enter, .fade-leave {
-  opacity: 0;
-}
+  [v-cloak] {
+    display: none;
+  }
+  .fade-transition {
+    transition: opacity .3s ease;
+  }
+  .fade-enter, .fade-leave {
+    opacity: 0;
+  }
+  #app {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    margin-bottom: 40px;
+  }
 
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>

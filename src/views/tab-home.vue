@@ -3,28 +3,29 @@
     <mt-swipe :show-indicators="false" :auto="5000">
       <mt-swipe-item :style="{ 'background-image': `url(${img})`}"
         v-for="(img, index) in imgs">
-
       </mt-swipe-item>
     </mt-swipe>
 
     <!-- swiper -->
-    <swiper :options="swiperOption">
+    <swiper v-if="true" :options="swiperOption">
       <swiper-slide v-for="slide in swiperSlides">
-        <img :src="slide.img" class="img-responsive"/>
-        <p>{{ slide.name }}</p>
+        <router-link to="/catalog/23">
+          <img :src="slide.img" class="img-responsive"/>
+          <p>{{ slide.name }}</p>
+        </router-link>
       </swiper-slide>
       <!-- <div class="swiper-pagination"  slot="pagination"></div> -->
     </swiper>
 
-
     <mt-cell
-      title="这是你的邀请商家"
-      label="学江的杂货铺"
-      to="/grid"
+      title="学江的杂货铺"
+      label="我是你的邀请商家"
+      to="/store/23"
       is-link>
       <span>进入</span>
     </mt-cell>
 
+    <p class="title-line">热门推荐</p>
     <card-product v-for="i in 5"></card-product>
 
   </div>
@@ -35,7 +36,7 @@ export default {
   name: 'tab-home',
   data () {
     return {
-      title: 'Tanmer.com',
+      title: '学江的杂货铺',
       imgs: [
         '/static/images/banner-1.jpg',
         '/static/images/banner-2.jpg'

@@ -22,14 +22,13 @@ Vue.use(Mint)
 // import 'framework7/dist/css/framework7.ios.min.css'
 // import 'framework7/dist/css/framework7.ios.colors.css'
 
-// register components
+// register root components style from F7
 Vue.component('grid', require('components/_grid'))
-
-Vue.component('card', require('components/card'))
+Vue.component('card', require('components/_card'))
+Vue.component('list', require('components/_list'))
 Vue.component('card-product', require('components/card-product')) // 产品
 Vue.component('card-shop', require('components/card-shop')) // 商家
 Vue.component('card-favorite', require('components/card-favorite')) // 分享文章
-Vue.component('list', require('components/_list'))
 
 // vueRouter
 import VueRouter from 'vue-router'

@@ -2,11 +2,44 @@
 *{
   font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
 }
+body,html{
+  height: 672px;
+}
+*{
+    -webkit-tap-highlight-color:transparent;
+    -webkit-touch-callout:none
+}
+a,input,select,textarea{
+  outline: 0
+}
+/*紫色*/
+a{
+  text-decoration: none;
+  color: #4e4a97
+}
+p{
+  margin:1em 0
+}
+p.title-line{
+  text-align: left;
+  padding-left: 10px;
+  background: url('/static/images/red-line.png') top left no-repeat;
+}
+hr{
+  border: solid 1px #f1ecec;
+}
 /***cell **/
+.mint-header{
+  background-color: #4e4a97;
+}
+
 .mint-cell-title{
   text-align: left;
 }
-
+/** common color ***/
+.red{ color: red;}
+.blue{ color: blue;}
+.green{ color: green;}
 /** for img from bootstrap **/
 img {
   vertical-align: middle;
