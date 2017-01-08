@@ -3,6 +3,8 @@
 import Vue from 'vue'
 import App from './App' // 程序入口
 import routes from './routes'
+// import 'font-awesome/scss/font-awesome.scss'
+import 'font-awesome-webpack'
 
 // Element UI
 // import Element from 'element-ui'
@@ -44,8 +46,20 @@ Vue.config.debug = true
 // 现在我们可以启动应用了！
 // 路由器会创建一个 App 实例，并且挂载到选择符 #app 匹配的元素上。
 // router.start(App, '#app')
-new Vue({
-  components: { App },
-  template: '<App/>',
-  router
-}).$mount('#app')
+
+function start () {
+  new Vue({
+    components: { App },
+    template: '<App/>',
+    router
+  }).$mount('#app')
+}
+
+if ('ontouchstart' in window) {
+  document.addEventListener('deviceready', function () {
+    start()
+  })
+} else {
+  start()
+}
+

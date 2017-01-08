@@ -2,7 +2,7 @@
   <div class="tab-find">
     <div class="card">
       <div class="card-content">
-        <img src="/static/images/banner-find.jpg" width="100%">
+        <img :src="require('../../static/images/banner-find.jpg')" width="100%">
       </div>
       <div class="card-footer">
         <span>热门商家</span>
