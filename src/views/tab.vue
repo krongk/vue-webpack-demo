@@ -1,23 +1,5 @@
 <template>
   <div>
-    <mt-tab-container v-model="selected" :swipeable=false>
-      <mt-tab-container-item id="tab-home">
-        <tab-home></tab-home>
-      </mt-tab-container-item>
-      <mt-tab-container-item id="tab-find">
-        <tab-find></tab-find>
-      </mt-tab-container-item>
-      <mt-tab-container-item id="tab-share">
-        open plus
-      </mt-tab-container-item>
-      <mt-tab-container-item id="tab-favorite">
-        <tab-favorite></tab-favorite>
-      </mt-tab-container-item>
-      <mt-tab-container-item id="tab-me">
-        <tab-me></tab-me>
-      </mt-tab-container-item>
-    </mt-tab-container>
-
     <mt-tabbar v-model="selected" :fixed=true>
       <mt-tab-item id="tab-home">
         <i class="fa fa-home fa-2x"></i>
@@ -41,6 +23,25 @@
         我的
       </mt-tab-item>
     </mt-tabbar>
+    <mt-tab-container v-model="selected" :swipeable=false>
+      <mt-tab-container-item id="tab-home">
+        <tab-home></tab-home>
+      </mt-tab-container-item>
+      <mt-tab-container-item id="tab-find">
+        <tab-find></tab-find>
+      </mt-tab-container-item>
+      <mt-tab-container-item id="tab-share">
+        open plus
+      </mt-tab-container-item>
+      <mt-tab-container-item id="tab-favorite">
+        <tab-favorite></tab-favorite>
+      </mt-tab-container-item>
+      <mt-tab-container-item id="tab-me">
+        <tab-me></tab-me>
+      </mt-tab-container-item>
+    </mt-tab-container>
+
+    
   </div>
 </template>
 

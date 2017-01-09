@@ -20,6 +20,9 @@ import Mint from 'mint-ui'
 import 'mint-ui/lib/style.css'
 Vue.use(Mint)
 
+// import Scroller from 'vue-scroller'
+// Vue.component('scroller', Scroller)
+
 // F7 css
 // import 'framework7/dist/css/framework7.ios.min.css'
 // import 'framework7/dist/css/framework7.ios.colors.css'
@@ -48,6 +51,7 @@ Vue.config.debug = true
 // router.start(App, '#app')
 
 function start () {
+  console.log('start')
   new Vue({
     components: { App },
     template: '<App/>',
@@ -55,8 +59,10 @@ function start () {
   }).$mount('#app')
 }
 
-if ('ontouchstart' in window) {
+if (window.cordova) {
   document.addEventListener('deviceready', function () {
+    var FastClick = require('fastclick')
+    FastClick.attach(document.body)
     start()
   })
 } else {

@@ -13,18 +13,19 @@
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
   "dependencies": {
+    "fastclick": "^1.0.6",
     "font-awesome": "^4.7.0",
     "font-awesome-webpack": "0.0.4",
-    "less-loader": "^2.2.3",
     "mint-ui": "^2.0.6",
-    "node-sass": "^4.1.1",
-    "sass-loader": "^4.1.1",
-    "style-loader": "^0.13.1",
     "vue": "^2.1.0",
     "vue-awesome-swiper": "^2.2.9",
     "vue-router": "^2.1.1"
   },
   "devDependencies": {
+    "less-loader": "^2.2.3",
+    "node-sass": "^4.1.1",
+    "sass-loader": "^4.1.1",
+    "style-loader": "^0.13.1",
     "autoprefixer": "^6.4.0",
     "babel-core": "^6.0.0",
     "babel-eslint": "^7.0.0",

@@ -1,5 +1,5 @@
 <template>
-  <div class="tab-home">
+  <div class="tab-home ">
     <mt-swipe :show-indicators="false" :auto="5000">
       <mt-swipe-item :style="{ 'background-image': `url(${img})`}"
         v-for="(img, index) in imgs">

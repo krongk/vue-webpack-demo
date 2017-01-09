@@ -1,7 +1,7 @@
 <template>
-  <div class="catalog">
+  <div class="catalog container scrollable">
     <p class="title-line">生活方式 </p>
-    <card-product v-for="i in 5"></card-product>
+    <card-product v-for="i in 20"></card-product>
   </div>
 </template>
 
