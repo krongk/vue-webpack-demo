@@ -2,14 +2,14 @@
   <div class="tab-favorite">
     <div class="card">
       <div class="card-content">
-        <img src="/static/images/banner-favorite.jpg" width="100%">
+        <img :src="require('../../static/images/banner-favorite.jpg')" width="100%">
       </div>
       <div class="card-footer">
         <span>本周捧场值最高店铺</span>
       </div>
       <div class="card-footer">
         <a href="#" class="link">
-          <div v-for="i in 6" class="facebook-avatar"><img src="/static/images/user.png" width="34" height="34"></div>
+          <div v-for="i in 6" class="facebook-avatar"><img :src="require('../../static/images/user.png')" width="34" height="34"></div>
         </a>
       </div>
     </div>

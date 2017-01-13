@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <mt-header v-if="visiable" :title="title" :fixed=false style="background: #4e4a97;">
+    <mt-header v-if="visiable" :title="title" :fixed=true style="background: #4e4a97;">
       <router-link slot="left" class="page-back" :to="'/tab'">
         <mt-button icon="fa fa-back">返回</mt-button>
       </router-link>
@@ -14,10 +14,13 @@
 
 <script>
 export default {
+  components: {
+  },
   name: 'app',
   data () {
     return {
-      title: '探码科技'
+      title: '探码科技',
+      items: []
     }
   },
   methods: {
@@ -49,7 +52,26 @@ export default {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    margin-bottom: 40px;
+    margin: 0;
   }
 
+  .card:first-child {
+    margin-top: 0 !important
+  }
+
+  .mint-tabbar ~ .mint-tab-container {
+    margin-bottom: 50px !important
+  }
+  .mint-header.is-fixed ~ .container {
+    margin-top: 40px !important
+  }
+  .scrollable {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="card facebook-card">
     <div class="card-header">
-      <div class="facebook-avatar"><img src="/static/images/user.png" width="34" height="34"></div>
+      <div class="facebook-avatar"><img :src="require('../../static/images/user.png')" width="34" height="34"></div>
       <div class="facebook-name">学江的杂货铺</div>
       <div class="facebook-date">专注海外代购很多年</div>
     </div>
@@ -42,16 +42,16 @@ export default {
       swiperSlides: [
         {
           name: '产品1',
-          img: '/static/images/product-1.jpg'},
+          img: require('../../static/images/product-1.jpg')},
         {
           name: '产品二',
-          img: '/static/images/product-2.jpg'},
+          img: require('../../static/images/product-2.jpg')},
         {
           name: '产品3',
-          img: '/static/images/product-1.jpg'},
+          img: require('../../static/images/product-1.jpg')},
         {
           name: '产品4',
-          img: '/static/images/product-2.jpg'}
+          img: require('../../static/images/product-2.jpg')}
       ]
     }
   },

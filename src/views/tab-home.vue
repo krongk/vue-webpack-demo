@@ -1,5 +1,5 @@
 <template>
-  <div class="tab-home">
+  <div class="tab-home ">
     <mt-swipe :show-indicators="false" :auto="5000">
       <mt-swipe-item :style="{ 'background-image': `url(${img})`}"
         v-for="(img, index) in imgs">
@@ -38,8 +38,8 @@ export default {
     return {
       title: '学江的杂货铺',
       imgs: [
-        '/static/images/banner-1.jpg',
-        '/static/images/banner-2.jpg'
+        require('../../static/images/banner-1.jpg'),
+        require('../../static/images/banner-2.jpg')
       ],
       swiperOption: {
         autoplay: 0,
@@ -54,16 +54,16 @@ export default {
       swiperSlides: [
         {
           name: '私藏',
-          img: '/static/images/icon-sicang.png'},
+          img: require('../../static/images/icon-sicang.png')},
         {
           name: '热门',
-          img: '/static/images/icon-remen.png'},
+          img: require('../../static/images/icon-remen.png')},
         {
           name: '生活',
-          img: '/static/images/icon-shenghuo.png'},
+          img: require('../../static/images/icon-shenghuo.png')},
         {
           name: '运动',
-          img: '/static/images/icon-yundong.png'}
+          img: require('../../static/images/icon-yundong.png')}
       ]
     }
   }
